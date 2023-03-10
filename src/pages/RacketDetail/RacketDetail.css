@@ -1,0 +1,60 @@
+.racketDesign {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100vw;
+    background-color: rgb(63, 110, 199);
+    color: bisque;
+    font-weight: bolder;
+    word-wrap: break-word;
+}
+
+.racketDetailCard {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 75vw;
+    word-wrap: break-word;
+
+}
+
+.detailPoster {
+
+    height: 40vh;
+}
+
+.rentDesign {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2.5em;
+    width: 8em;
+
+    border-radius: 1em;
+
+    background-color: rgb(3, 23, 154);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    color: bisque;
+}
+
+.rentDesign:hover {
+    transition: 0.2s;
+    background-color: rgb(0, 13, 96);
+}
+
+#titulo{
+    font-size: 50px;
+    margin: 35px;
+}

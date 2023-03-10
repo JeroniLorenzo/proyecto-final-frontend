@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
-import Logo from './home.jpg';
 import { useSelector, useDispatch } from "react-redux";
 import { userData, logout } from "../../pages/User/userSlice";
 import { racketData, find, clear } from '../../pages/racketSlice';
