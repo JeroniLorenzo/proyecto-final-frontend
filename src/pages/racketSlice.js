@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const racketSlice = createSlice({
-    name: 'serie',
+    name: 'racket',
     initialState: {
       choosen : {},
       rackets : []
