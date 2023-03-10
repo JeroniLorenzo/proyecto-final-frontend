@@ -1,0 +1,35 @@
+.profileDesign {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(63, 110, 199);
+    color:bisque;
+}
+
+.profileCard{
+    height: 70vh;
+    width: 27vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 23, 154);
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    margin: 10px;
+}
+
+#cabecera{
+    font-size: 30px;
+}
+
+p{
+    color: azure;
+    font-size: 20px;
+}
