@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { racketData } from '../racketSlice';
 import { userData } from '../User/userSlice';
-import { postRent } from '../../services/apiCalls';
+import { postSale } from '../../services/apiCalls';
 
 export const RacketDetail = () => {
 
@@ -14,19 +14,18 @@ export const RacketDetail = () => {
     const navigate = useNavigate();
     const [msg, setMsg] = useState('');
 
-    const RentMe = () => {
-        const euro = "€"
+    const Sale = () => {
+        
         let body = {
             idRacket : detailRdx.choosen._id,
             racketName : detailRdx.choosen.model,
             idUser : detailUsr.userPass._id,
             nameUser : detailUsr.userPass.name,
-            rentalDate : dayjs().format('DD/MM/YYYY'),
-            returnDate : dayjs().add(7, 'days').format('DD/MM/YYYY'),
-            price: 5 + euro
+            saleDate : dayjs().format('DD/MM/YYYY'),
+            price: detailRdx.choosen.price
         }
 
-        postRent(body, detailUsr.userPass.token)
+        postSale(body, detailUsr.userPass.token)
             .then(resultado=>{
                 setMsg(resultado.data.data)
 
@@ -44,7 +43,6 @@ export const RacketDetail = () => {
             {detailRdx.choosen._id !== '' &&
             
                 <div className='racketDetailCard'>
-                    <div id='titulo'>{detailRdx.choosen.tittle}</div>
                     <div><img className='detailPoster' src={`${detailRdx.choosen.image}`}/></div>
                     <div>{detailRdx.choosen.model}</div>
                     <div>{detailRdx.choosen.brand}</div>
@@ -56,7 +54,7 @@ export const RacketDetail = () => {
             
                     {detailUsr.userPass.token !== '' &&
                     
-                        <div onClick={()=>RentMe()} className='rentDesign'>Comprar</div>
+                        <div onClick={()=>Sale()} className='rentDesign'>Comprar</div>
                         
                     }
                     
