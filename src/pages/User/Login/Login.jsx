@@ -55,10 +55,10 @@ export const Login = () => {
                         surname: resultado.data.user[0].surname,
                         email: resultado.data.user[0].email,
                         address: resultado.data.user[0].address,
-                        phone: resultado.data.user[0].phone
+                        phone: resultado.data.user[0].phone,
+                        roleId: resultado.data.user[0].roleId
 
                     }
-                    
                         
                     dispatch(login({userPass: userPass}));
 

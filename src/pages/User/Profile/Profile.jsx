@@ -75,12 +75,14 @@ export const Profile = () => {
                 sales.map(
                     sale => {
                         return (
+                            console.log(sale, 'esta es la venta'),
                             <div key={sale._id}>      
                                 <table>     
                                     <tbody>
                                         <tr>
-                                            <td>{sale.RacketName}</td>
-                                            <td>{sale.saleDate}</td>
+                                            <td>{sale.racketId}</td>
+                                            <td>{sale.date}</td>
+                                            <td>{sale.price} €</td>
                                             
                                         </tr>
                                     </tbody>

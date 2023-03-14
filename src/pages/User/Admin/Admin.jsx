@@ -12,9 +12,8 @@ export const Admin = () => {
     const [sales, setSales] = useState([]);
 
     useEffect(() => {
-
-        if (userRDX.userPass.rol !== 'admin') {
-            navigate("/");
+        if (userRDX.userPass.roleId === "63fce07fd7d5a2f9bc3257c2") {
+            navigate("/admin");
         }
 
     }, [])
@@ -67,9 +66,9 @@ export const Admin = () => {
                                             <tr>
                                                 <td>{sale.userId.name}</td>
                                                 <td>{sale.userId._id}</td>
-                                                <td>{sale.serieId.model}</td>
-                                                <td>{sale.serieId._id}</td>
-                                                <td>{sale.saleDate}</td>
+                                                <td>{sale.racketId.model}</td>
+                                                <td>{sale.racketId._id}</td>
+                                                <td>{sale.date}</td>
                                                 <td>{sale.price}</td>
                                             </tr>
                                         </tbody>

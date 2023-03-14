@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
+import Logo from './home.jpg';
 import { useSelector, useDispatch } from "react-redux";
 import { userData, logout } from "../../pages/User/userSlice";
 import { racketData, find, clear } from '../../pages/racketSlice';
@@ -36,7 +37,7 @@ export const Header = () => {
                 .catch(error => console.log(error));
         } else if (search === "" && datosReduxRackets.rackets.length > 0) {
 
-            dispatch(clear({ choosen: {}, series: [] }));
+            dispatch(clear({ choosen: {}, rackets: [] }));
         }
     }, [search])
 
@@ -84,13 +85,13 @@ export const Header = () => {
             </div>
             <div className='headerLinksDesign'>
 
-                {datosReduxUsuario.userPass.rol === "admin" &&
+                {datosReduxUsuario.userPass.roleId === "63fce07fd7d5a2f9bc3257c2" &&
 
                     <div onClick={() => navigate("/admin")} className='linkDesign'>
                         Admin
                     </div>
                 }
-
+                
                 {datosReduxUsuario.userPass.token !== "" ?
 
                     (<>

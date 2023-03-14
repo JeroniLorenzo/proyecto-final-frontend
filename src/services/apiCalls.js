@@ -22,9 +22,8 @@ export const getSearch = async (busqueda, token) => {
     let config = {
         headers: { Authorization: `Bearer ${token}` }
     };
-    console.log('entras aqui', busqueda)
 
-    return await axios.get(`${root}rackets/?tittle=${busqueda}`, config);
+    return await axios.get(`${root}rackets/model/${busqueda}`, config);
 };
 
 export const postSale= async (body, token) => {

@@ -17,11 +17,11 @@ export const RacketDetail = () => {
     const Sale = () => {
         
         let body = {
-            idRacket : detailRdx.choosen._id,
+            racketId : detailRdx.choosen._id,
             racketName : detailRdx.choosen.model,
-            idUser : detailUsr.userPass._id,
-            nameUser : detailUsr.userPass.name,
-            saleDate : dayjs().format('DD/MM/YYYY'),
+            userId : detailUsr.userPass._id,
+            userName : detailUsr.userPass.name,
+            date : dayjs().format('DD/MM/YYYY'),
             price: detailRdx.choosen.price
         }
 
@@ -39,6 +39,7 @@ export const RacketDetail = () => {
     }
 
     return(
+
         <div className='racketDesign'>
             {detailRdx.choosen._id !== '' &&
             
@@ -49,7 +50,9 @@ export const RacketDetail = () => {
                     <div>{detailRdx.choosen.type}</div>
                     <div>{detailRdx.choosen.state}</div>
                     <div>{detailRdx.choosen.level}</div>
-                    <div>{detailRdx.choosen.price}</div>
+                    <div>{detailRdx.choosen.price} €</div>
+                    
+                    
 
             
                     {detailUsr.userPass.token !== '' &&
@@ -63,6 +66,7 @@ export const RacketDetail = () => {
             
             }
         </div>
+        
     )
 
 };

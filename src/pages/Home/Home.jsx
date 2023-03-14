@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { RacketCard } from '../../common/RacketCard/RacketCard';
 import { getRackets } from '../../services/apiCalls';
 import './Home.css';
+import Loading from './loading.gif';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { racketData, select } from '../racketSlice';
