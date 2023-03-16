@@ -51,28 +51,15 @@ export const Admin = () => {
                         return (
                             <div key={sale._id}>
                                 <div>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre del usuario</th>
-                                                <th>ID usuario</th>
-                                                <th>Modelo de la pala</th>
-                                                <th>ID pala</th>
-                                                <th>Fecha Compra</th>
-                                                <th>Precio</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>{sale.userId.name}</td>
-                                                <td>{sale.userId._id}</td>
-                                                <td>{sale.racketId.model}</td>
-                                                <td>{sale.racketId._id}</td>
-                                                <td>{sale.date}</td>
-                                                <td>{sale.price}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+
+                                    <div>Nombre: {sale.userId.name}</div>
+                                    <div>ID Usuario: {sale.userId._id}</div>
+                                    <div>Modelo: {sale.racketId.model}</div>
+                                    <div>ID Pala: {sale.racketId._id}</div>
+                                    <div>Fecha: {sale.date}</div>
+                                    <div>Precio: {sale.price}€</div>
+                                    <div>_________________________</div>
+
                                 </div>
 
                             </div>

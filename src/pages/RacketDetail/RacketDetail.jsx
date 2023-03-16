@@ -6,16 +6,15 @@ import { useSelector } from "react-redux";
 import { racketData } from '../racketSlice';
 import { userData } from '../User/userSlice';
 import { postSale } from '../../services/apiCalls';
+import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
 
 export const RacketDetail = () => {
-
     const detailRdx = useSelector(racketData);
     const detailUsr = useSelector(userData);
     const navigate = useNavigate();
     const [msg, setMsg] = useState('');
 
     const Sale = () => {
-        
         let body = {
             racketId : detailRdx.choosen._id,
             racketName : detailRdx.choosen.model,
@@ -27,8 +26,8 @@ export const RacketDetail = () => {
 
         postSale(body, detailUsr.userPass.token)
             .then(resultado=>{
-                setMsg(resultado.data.data)
-
+                setMsg(resultado.data)
+            
                 setTimeout(()=>{
                     navigate('/');
                 },1500);
@@ -39,34 +38,31 @@ export const RacketDetail = () => {
     }
 
     return(
-
-        <div className='racketDesign'>
-            {detailRdx.choosen._id !== '' &&
-            
-                <div className='racketDetailCard'>
-                    <div><img className='detailPoster' src={`${detailRdx.choosen.image}`}/></div>
-                    <div>{detailRdx.choosen.model}</div>
-                    <div>{detailRdx.choosen.brand}</div>
-                    <div>{detailRdx.choosen.type}</div>
-                    <div>{detailRdx.choosen.state}</div>
-                    <div>{detailRdx.choosen.level}</div>
-                    <div>{detailRdx.choosen.price} €</div>
-                    
-                    
-
-            
-                    {detailUsr.userPass.token !== '' &&
-                    
-                        <div onClick={()=>Sale()} className='rentDesign'>Comprar</div>
-                        
-                    }
-                    
-                      <div>{msg}</div>
-                </div>
-            
-            }
-        </div>
-        
-    )
-
+        <Container className='racketDesign'>
+            {detailRdx.choosen._id !== '' && (
+                <Card className='racketDetailCard'>
+                    <Row>
+                        <Col xs={12} md={6}>
+                            <Image className='detailPoster' src={`${detailRdx.choosen.image}`} fluid />
+                        </Col>
+                        <Col xs={12} md={6}>
+                            <Card.Body>
+                                {console.log(detailRdx)}
+                                <Card.Text>Modelo: {detailRdx.choosen.model}</Card.Text>
+                                <Card.Text>Marca: {detailRdx.choosen.brand}</Card.Text>
+                                <Card.Text>Tipo: {detailRdx.choosen.type}</Card.Text>
+                                <Card.Text>Estado: {detailRdx.choosen.state}</Card.Text>
+                                <Card.Text>Nivel: {detailRdx.choosen.level}</Card.Text>
+                                <Card.Text>Precio: {detailRdx.choosen.price} €</Card.Text>
+                                {detailUsr.userPass.token !== '' && (
+                                    <Button onClick={Sale} className='rentDesign'>Comprar</Button>
+                                )}
+                                <div>{msg}</div>
+                            </Card.Body>
+                        </Col>
+                    </Row>
+                </Card>
+            )}
+        </Container>
+    );
 };

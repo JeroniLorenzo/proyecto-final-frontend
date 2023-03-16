@@ -59,6 +59,7 @@ export const Register = () => {
 
     return (
         <div className='registerDesign'>
+            <div className='registerForm'>
             <p>Nombre</p>
             <InputText  
                 type={'text'} 
@@ -138,5 +139,7 @@ export const Register = () => {
             </div>
             <div className='loginButtonDesign' onClick={()=>signMe()}>Sign in</div>
         </div>
+            </div>
+           
     );
 };

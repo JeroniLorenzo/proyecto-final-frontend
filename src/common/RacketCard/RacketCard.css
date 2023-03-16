@@ -4,21 +4,68 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    word-wrap: break-word;
     height: 12em;
     width: 8em;
-    background-color: rgb(0, 13, 96);
-    color: bisque;
+    background-color: rgb(12, 106, 200);
+    color: black;
     border-radius: 1em;
     margin: 0.7em;
+}
+
+
+.textCardDesign{
+    word-wrap: break-word;
 }
 
 .posterDesign {
 
     height: 7em;
     width: 5em;
+    
 }
 
 .racketCardDesign:hover {
     background-color: rgb(0, 25, 185);
+}
+
+@media only screen and (max-width: 1201px) {
+    .racketCardDesign{
+        height: 12em;
+        width: 8em;
+        font-size: smaller;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .racketCardDesign{
+        height: 10em;
+        width: 8em;
+        font-size: smaller;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .racketCardDesign{
+        height: 10em;
+        width: 7em;
+        font-size: smaller;
+        text-align: center;
+        word-wrap: break-word;
+        image-rendering: auto;
+        
+    }
+} 
+
+@media only screen and (max-width: 560px) {
+    .racketCardDesign{
+        height: 8em;
+        width: 6em;
+        font-size: smaller;
+        text-align: center;
+        word-wrap: break-word;
+    }
 }

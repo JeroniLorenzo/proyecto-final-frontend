@@ -8,6 +8,7 @@ import { racketData, find, clear } from '../../pages/racketSlice';
 import { InputText } from '../InputText/InputText';
 import { getSearch } from '../../services/apiCalls';
 
+
 export const Header = () => {
 
 
@@ -65,14 +66,15 @@ export const Header = () => {
 
         navigate("/")
     }
-    
+
 
     return (
 
+
         <div className='headerDesign'>
-            <div onClick={() => resetHome()} className='logoDesignHeader'><img className='homeAvatar' src={Logo} alt="Home" /></div>
-            <div className='searchDesign'>
-                <div className='barra'>
+            <div onClick={() => resetHome()} className='logoDesignHeader col-xs-12 col-sm-4 col-md-4 col-lg-4'><img className='homeAvatar' src={Logo} alt="Home" /></div>
+            <div className='searchDesign col-xs-12 col-sm-4 col-md-4 col-lg-4'>
+                <div className='barra col-xs-12 col-sm-4 col-md-4 col-lg-4'>
                     <InputText
                         type={"text"}
                         name={"search"}
@@ -83,34 +85,35 @@ export const Header = () => {
                 </div>
 
             </div>
-            <div className='headerLinksDesign'>
+            <div className='headerLinksDesign col-xs-12 col-sm-4 col-md-4 col-lg-4'>
 
                 {datosReduxUsuario.userPass.roleId === "63fce07fd7d5a2f9bc3257c2" &&
 
-                    <div onClick={() => navigate("/admin")} className='linkDesign'>
+                    <div onClick={() => navigate("/admin")} className='linkDesign col-xs-12 col-sm-4 col-md-4 col-lg-4'>
                         Admin
                     </div>
                 }
-                
+
                 {datosReduxUsuario.userPass.token !== "" ?
 
                     (<>
-                        <div onClick={() => navigate("/profile")} className='linkDesign' >{datosReduxUsuario.userPass.name}</div>
+                        <div onClick={() => navigate("/profile")} className='linkDesign col-xs-12 col-sm-4 col-md-4 col-lg-4' >{datosReduxUsuario.userPass.name}</div>
 
-                        <div className='linkDesign' onClick={() => logOff()}>logout</div>
+                        <div className='linkDesign col-xs-12 col-sm-4 col-md-4 col-lg-4' onClick={() => logOff()}>logout</div>
                     </>)
 
 
                     : (
                         <>
-                            <div className='linkDesign' onClick={() => setTimeout(() => { navigate("/login") }, 200)}>login</div>
-                            <div className='linkDesign' onClick={() => setTimeout(() => { navigate("/register") }, 200)}>register</div>
+                            <div className='linkDesign col-xs-12 col-sm-4 col-md-4 col-lg-4' onClick={() => setTimeout(() => { navigate("/login") }, 200)}>login</div>
+                            <div className='linkDesign col-xs-12 col-sm-4 col-md-4 col-lg-4' onClick={() => setTimeout(() => { navigate("/register") }, 200)}>register</div>
                         </>
                     )
                 }
 
             </div>
         </div>
+
 
 
     );

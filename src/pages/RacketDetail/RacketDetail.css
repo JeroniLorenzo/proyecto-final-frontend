@@ -7,9 +7,12 @@
     height: 85vh;
     width: 100vw;
     background-color: rgb(63, 110, 199);
-    color: bisque;
+    color: black;
     font-weight: bolder;
     word-wrap: break-word;
+}
+p{
+    color: black;
 }
 
 .racketDetailCard {

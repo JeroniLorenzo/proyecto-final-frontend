@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { racketData, select } from '../racketSlice';
 
+
+
 /* A React component that is fetching data from an API and displaying it in a card. */
 export const Home = () => {
 
@@ -49,21 +51,25 @@ export const Home = () => {
 
     }
 
-   /* A ternary operator. */
+    /* A ternary operator. */
     return (
         <div className='homeDesign'>
 
             {datosReduxRackets.rackets.length > 0 ? (
-                
+
                 /* Mapping the data from the API and displaying it in a card. */
-                <div className='rosterDesign'>
+                <div className='rosterDesign col-xs-12 col-sm-4 col-md-4 col-lg-4'>
                     {datosReduxRackets.rackets.map(
                         racket => {
-                    
+
                             return (
-                                <div onClick={() => Choosen(racket)} key={racket._id}>
-                                    <RacketCard racket={racket} />
-                                </div>
+                                <div className='design col-xs-12 col-sm-4 col-md-4 col-lg-4' key={racket._id}>
+                                    <div onClick={() => Choosen(racket)} >
+                                        <RacketCard racket={racket} />
+                                    </div>
+                                </div>    
+
+
                             )
                         }
                     )}
@@ -79,7 +85,7 @@ export const Home = () => {
                     rackets.length > 0 ? (
 
                         /* Mapping the data from the API and displaying it in a card. */
-                        <div className='rosterDesign'>
+                        <div className='rosterDesign col-xs-12 col-sm-10 col-md-10 col-lg-10'>
                             {rackets.map(
                                 racket => {
                                     return (
