@@ -11,7 +11,7 @@ export const InputText = ({type, name, className, placeholder, functionHandler, 
                 className={className}
                 placeholder={placeholder}
                 onChange={(e)=> functionHandler(e)}
-                nBlur={(e)=> errorHandler(e)}
+                onBlur={(e)=> errorHandler(e)}
             />
         </div>
         

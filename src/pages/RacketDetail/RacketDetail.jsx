@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { racketData } from '../racketSlice';
 import { userData } from '../User/userSlice';
 import { postSale } from '../../services/apiCalls';
-import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
+// import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
 
 export const RacketDetail = () => {
     const detailRdx = useSelector(racketData);
@@ -38,31 +38,25 @@ export const RacketDetail = () => {
     }
 
     return(
-        <Container className='racketDesign'>
+        <div className='racketDesign'>
             {detailRdx.choosen._id !== '' && (
-                <Card className='racketDetailCard'>
-                    <Row>
-                        <Col xs={12} md={6}>
-                            <Image className='detailPoster' src={`${detailRdx.choosen.image}`} fluid />
-                        </Col>
-                        <Col xs={12} md={6}>
-                            <Card.Body>
+                <div className='racketDetailCard'>
+
+                            <img className='detailPoster' src={`${detailRdx.choosen.image}`} />
+                       
                                 {console.log(detailRdx)}
-                                <Card.Text>Modelo: {detailRdx.choosen.model}</Card.Text>
-                                <Card.Text>Marca: {detailRdx.choosen.brand}</Card.Text>
-                                <Card.Text>Tipo: {detailRdx.choosen.type}</Card.Text>
-                                <Card.Text>Estado: {detailRdx.choosen.state}</Card.Text>
-                                <Card.Text>Nivel: {detailRdx.choosen.level}</Card.Text>
-                                <Card.Text>Precio: {detailRdx.choosen.price} €</Card.Text>
+                                <div>Modelo: {detailRdx.choosen.model}</div>
+                                <div>Marca: {detailRdx.choosen.brand}</div>
+                                <div>Tipo: {detailRdx.choosen.type}</div>
+                                <div>Estado: {detailRdx.choosen.state}</div>
+                                <div>Nivel: {detailRdx.choosen.level}</div>
+                                <div>Precio: {detailRdx.choosen.price} €</div>
                                 {detailUsr.userPass.token !== '' && (
-                                    <Button onClick={Sale} className='rentDesign'>Comprar</Button>
+                                    <div onClick={Sale} className='rentDesign'>Comprar</div>
                                 )}
                                 <div>{msg}</div>
-                            </Card.Body>
-                        </Col>
-                    </Row>
-                </Card>
+                </div>
             )}
-        </Container>
+        </div>
     );
 };
