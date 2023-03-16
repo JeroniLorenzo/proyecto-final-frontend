@@ -58,7 +58,7 @@ export const Admin = () => {
                                     <div>ID Pala: {sale.racketId._id}</div>
                                     <div>Fecha: {sale.date}</div>
                                     <div>Precio: {sale.price}€</div>
-                                    <div>_________________________</div>
+                                    <div>--------------------------------------</div>
 
                                 </div>
 

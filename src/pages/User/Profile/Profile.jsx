@@ -45,10 +45,10 @@ export const Profile = () => {
     }, [sales]);
 
     return (
-        <div className='profileDesign col-xs-12 col-sm-4 col-md-4 col-lg-4'>
+        <div className='profileDesign'>
 
-            <div className='profileCard col-xs-12 col-sm-4 col-md-4 col-lg-4'>
-                <header id="cabecera col-xs-12 col-sm-4 col-md-4 col-lg-4">Datos del usuario</header>
+            <div className='profileCard'>
+                <header className="cabecera">Datos del usuario</header>
                 <div>
                     <p>Nombre:</p>
                     {userRDX.userPass.name}
@@ -71,7 +71,7 @@ export const Profile = () => {
                 </div>
             </div>
             <div>
-                <p>Historial de Compras</p>
+            <header className="cabecera">Historial de Compras</header>
             </div>
 
             {sales.length > 0 &&
@@ -83,6 +83,7 @@ export const Profile = () => {
                                 <div>{sale.racketId}</div>
                                 <div>{sale.date}</div>
                                 <div>{sale.price} €</div>
+                                <div>-----------------------</div>
 
                             </div>
                         )

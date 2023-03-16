@@ -88,7 +88,7 @@ export const Login = () => {
     }
 
     return (
-        <div className='loginDesign'>
+        <div className='loginDesign col-xs-12 col-sm-10 col-md-10 col-lg-10'>
             <p>Email de usuario</p>
             <InputText 
                 type={"email"} 
@@ -114,7 +114,7 @@ export const Login = () => {
                 {credencialesError.passwordError}
             </div>
 
-            <div className='loginButtonDesign' onClick={()=>Logeame()}>LOGIN</div>
+            <div className='loginButtonDesign col-xs-12 col-sm-10 col-md-10 col-lg-10' onClick={()=>Logeame()}>LOGIN</div>
         </div>
     );
 };

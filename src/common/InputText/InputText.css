@@ -1,13 +1,33 @@
 .inputDesign {
-    /* height: 3em;
-    width: 23em; */
+    height: 22px;
+    width: 11em;
     border-radius: 5px;
     background-color: rgb(75, 158, 240);
     color: black;
 }
+@media only screen and (max-width: 295px) {
+    .inputDesign{
+        height: 18px;
+        width: 90px;
+        font-size:xx-small;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 236px) {
+    .inputDesign{
+        height: 18px;
+        width: 90px;
+        font-size:xx-small;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
 
 ::placeholder{
     color:black;
+    font-size: smaller;
 }
 
 .inputDesignError{

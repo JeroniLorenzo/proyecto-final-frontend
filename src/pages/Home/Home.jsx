@@ -58,12 +58,12 @@ export const Home = () => {
             {datosReduxRackets.rackets.length > 0 ? (
 
                 /* Mapping the data from the API and displaying it in a card. */
-                <div className='rosterDesign col-xs-12 col-sm-4 col-md-4 col-lg-4'>
+                <div className='rosterDesign col-xs-12 col-sm-10 col-md-10 col-lg-10'>
                     {datosReduxRackets.rackets.map(
                         racket => {
 
                             return (
-                                <div className='design col-xs-12 col-sm-4 col-md-4 col-lg-4' key={racket._id}>
+                                <div className='design col-xs-12 col-sm-10 col-md-10 col-lg-10' key={racket._id}>
                                     <div onClick={() => Choosen(racket)} >
                                         <RacketCard racket={racket} />
                                     </div>
@@ -85,7 +85,7 @@ export const Home = () => {
                     rackets.length > 0 ? (
 
                         /* Mapping the data from the API and displaying it in a card. */
-                        <div className='rosterDesign col-xs-12 col-sm-10 col-md-10 col-lg-10'>
+                        <div className='rosterDesign  col-xs-12 col-sm-10 col-md-10 col-lg-10'>
                             {rackets.map(
                                 racket => {
                                     return (
