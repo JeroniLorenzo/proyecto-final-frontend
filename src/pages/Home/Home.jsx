@@ -85,7 +85,7 @@ export const Home = () => {
                     rackets.length > 0 ? (
 
                         /* Mapping the data from the API and displaying it in a card. */
-                        <div className='rosterDesign  col-xs-12 col-sm-10 col-md-10 col-lg-10'>
+                        <div className='rosterDesign'>
                             {rackets.map(
                                 racket => {
                                     return (

@@ -79,10 +79,9 @@ export const Profile = () => {
                     sale => {
                         return (
                             <div key={sale._id}>
-
-                                <div>{sale.racketId}</div>
-                                <div>{sale.date}</div>
-                                <div>{sale.price} €</div>
+                                <div>ID Pala: {sale.racketId}</div>
+                                <div>Fecha de compra: {sale.date}</div>
+                                <div>Precio: {sale.price} €</div>
                                 <div>-----------------------</div>
 
                             </div>

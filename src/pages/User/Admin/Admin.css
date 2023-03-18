@@ -6,5 +6,8 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgb(63, 110, 199);
+    background-color: rgb(67, 67, 67);
+}
+div{
+    color: beige;
 }

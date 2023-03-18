@@ -42,11 +42,11 @@ export const RacketDetail = () => {
                 <div className='racketDetailCard col-xs-12 col-sm-10 col-md-8 col-lg-6'>
                     
                             <img className='detailPoster' src={`${detailRdx.choosen.image}`} />
-                       
+                       {console.log(detailRdx)}
                                 <div>Modelo: {detailRdx.choosen.model}</div>
-                                {/* <div>Marca: {detailRdx.choosen.brand}</div> */}
+                                <div>Marca: {detailRdx.choosen.brand}</div>
                                 <div>Tipo: {detailRdx.choosen.type}</div>
-                                {/* <div>Estado: {detailRdx.choosen.state}</div> */}
+                                <div>Estado: {detailRdx.choosen.state}</div>
                                 <div>Nivel: {detailRdx.choosen.level}</div>
                                 <div>Precio: {detailRdx.choosen.price} €</div>
                                 {detailUsr.userPass.token !== '' && (

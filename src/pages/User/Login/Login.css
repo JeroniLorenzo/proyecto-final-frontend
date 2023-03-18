@@ -8,7 +8,11 @@
     height: 85vh;
     width: 100vw;
 
-    background-color: rgb(63, 110, 199);
+    background-color: rgb(67, 67, 67);
+}
+
+p{
+    color:bisque
 }
 
 .loginButtonDesign {
@@ -19,8 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(3, 23, 154);
-    color: antiquewhite;
+    background-color: rgb(211, 97, 10);
     cursor: pointer;
     margin: 30px;
     border-radius: 1em;
@@ -30,7 +33,7 @@
 .loginButtonDesign:hover {
 
     transition: 0.3s;
-    background-color: rgb(0, 13, 96);
+    background-color: rgb(226, 128, 54);
 }
 
 .errorText{

@@ -23,7 +23,6 @@ export const Admin = () => {
         if (sales.length === 0) {
 
             setTimeout(() => {
-
                 allSalesAdmin(userRDX.userPass.token)
                     .then(
                         resultado => {
@@ -51,7 +50,6 @@ export const Admin = () => {
                         return (
                             <div key={sale._id}>
                                 <div>
-
                                     <div>Nombre: {sale.userId.name}</div>
                                     <div>ID Usuario: {sale.userId._id}</div>
                                     <div>Modelo: {sale.racketId.model}</div>
@@ -59,7 +57,6 @@ export const Admin = () => {
                                     <div>Fecha: {sale.date}</div>
                                     <div>Precio: {sale.price}€</div>
                                     <div>--------------------------------------</div>
-
                                 </div>
 
                             </div>
