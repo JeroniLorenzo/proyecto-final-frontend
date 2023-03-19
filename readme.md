@@ -3,9 +3,7 @@
 Con la API creada en el anterior proyecto, he hecho el front-end de una aplicación de ventas de palas de pádel.
 
 ## Tecnologias usadas.
-Captura de pantalla_20230130_164805 JavaScript.
-Captura de pantalla_20230130_165038 React.
-Captura de pantalla_20230130_165152 CSS3.
+
 ## Vistas
 
 - La vista home.
@@ -24,7 +22,7 @@ Aquí hay dos inputs para logearse, al igual que en el registro hay control de e
 
 En esta vista vista se nos muestran los datos del usuario y sus respectivas compras realizadas en la app.
 
-- La vista del detalle de la serie.
+- La vista del detalle de la pala.
 
 Accedemos a esta vista al hacer click sobre una pala desde home. Aqui nos salen detalles de la pala y solo si estamos logeados nos aparecerá un botón con la opción de comprar dicha pala. Si compramos la pala y se ha realizado con éxito, nos saldrá un mensaje abajo del botón indicando que la compra ha sido un éxito.
 
@@ -47,5 +45,10 @@ Desde Apicalls hacemos las llamadas que necesitemos a nuestra Api. Ya sea para r
 
 - Útiles
 Aqui tenemos funciones y constantes que nos van a ser útiles en la aplicación. Como por ejemplo los controles de errores.
+
+## Futuras integraciones.
+
+Al ser mi primer gran proyecto, tanto para hacer el back y el front hay cosas que me han quedado pendientes por crear. Voy a seguir trabajando en este proyecto añadiendo un carrito de compra, futuras mejoras estéticas, que no solo haya palas de pádel sino que también puedas comprar ropa deportiva, crear muchas palas y ropa en la base de datos para integrar paginación en la vista home. Usar las cartas de las raquetas y refactorizarlas para hacer cartas pero ésta vez de usuarios para que el admin pueda ver y buscar a todos los usuarios creados en la app... y un largo etc.
+
 
 Jeroni Lorenzo Solano.
