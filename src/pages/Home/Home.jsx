@@ -39,13 +39,11 @@ export const Home = () => {
 
     }, [rackets]);
 
-    const Choosen = (racket) => {
+    
+    const Choosen = (racket) =>{
 
         dispatch(select({ choosen: racket }))
-
-        navigate("/detail");
-
-
+        navigate('/detail');
     }
 
     return (
