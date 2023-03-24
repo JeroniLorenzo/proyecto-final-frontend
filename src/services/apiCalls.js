@@ -12,6 +12,11 @@ export const postRegistered = async (body) => {
     return await axios.post(`${root}users/`, body)
 };
 
+export const postRegisteredRacket = async (body) => {
+    
+    return await axios.post(`${root}rackets/`, body)
+}
+
 export const getRackets = async () => {
 
     return await axios.get(`${root}rackets/`);
